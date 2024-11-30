@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 81, 0, 255;
+  --color-primary-accent: 51, 0, 255;
+  --color-primary-light: 112, 46, 255;
+  --color-white: 255, 255, 255;
+  --text-color-muted: 68, 67, 67;
+  --text-color: 1, 1, 1;
+  --bg-base: 239, 239, 241;
+  --bg-secondary: 255, 255, 255;
+}
+.dark {
+  --text-color-muted: 161, 160, 160;
+  --text-color: 255, 255, 255;
+  --bg-base: 10, 10, 12;
+  --bg-secondary: 23, 23, 25;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color-muted: 161, 160, 160;
+    --text-color: 255, 255, 255;
+    --bg-base: 10, 10, 12;
+    --bg-secondary: 23, 23, 25;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+  font-family: "Sora", sans-serif;
+  background: rgb(var(--bg-secondary));
+  color: rgb(var(--text-color));
+  scroll-behavior: smooth;
+  scrollbar-color: rgb(var(--color-primary)) transparent;
+}
+.scroll-w {
+  scrollbar-width: none;
+}
